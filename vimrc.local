@@ -1,0 +1,26 @@
+" set 256-color
+let &t_Co=256
+
+" setup a funky statusline
+set laststatus=2
+set statusline=
+set statusline+=%-3.3n\                      " buffer number
+set statusline+=%F\                          " file name
+set statusline+=%h%m%r%w                     " flags
+set statusline+=\[%{strlen(&ft)?&ft:'none'}, " filetype
+set statusline+=%{&fileencoding},            " fileencoding
+set statusline+=%{&fileformat}]              " file format
+set statusline+=%=                           " right align
+set statusline+=0x%-8B\                      " current char
+set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+
+" 多语言支持
+let &termencoding = &encoding
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+
+map tn :tabnext<cr>
+map tp :tabprevious<cr>
+map td :tabnew .<cr>
+map tt :tabedit<space>
+map tc :tabclose<cr>

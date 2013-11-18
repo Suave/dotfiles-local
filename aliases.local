@@ -1,0 +1,5 @@
+alias todo="vi ~/.todo"
+alias nb="cd ~/works/nextbig"
+alias nbo="cd ~/works/nextbig-offline"
+alias 1kg="cd ~/works/1kg.org"
+alias ore="cd ~/works/ore"
